@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.resin.io/login_
+    body:
+      encoding: UTF-8
+      string: '{"username":"brfzei+dk2sdrq9ka464@grr.la","password":"brfzei+dk2sdrq9ka464"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Fri, 13 Apr 2018 23:18:46 GMT
+      Etag:
+      - W/"304-nCDRAU53FNX8Y5HaPoZx+6ua4Ck"
+      Vary:
+      - X-HTTP-Method-Override, Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '772'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzcwMTYsInVzZXJuYW1lIjoiYnJmemVpX2RrMnNkcnE5a2E0NjQiLCJlbWFpbCI6ImJyZnplaStkazJzZHJxOWthNDY0QGdyci5sYSIsImNyZWF0ZWRfYXQiOiIyMDE4LTA0LTEzVDIzOjE3OjM2LjA2MFoiLCJqd3Rfc2VjcmV0IjoiVVNJSUhFNzU1Q1lGTEJRUklOUlBLU1hFVFBXU0lKRTYiLCJoYXNfZGlzYWJsZWRfbmV3c2xldHRlciI6ZmFsc2UsInNvY2lhbF9zZXJ2aWNlX2FjY291bnQiOltdLCJoYXNQYXNzd29yZFNldCI6dHJ1ZSwibmVlZHNQYXNzd29yZFJlc2V0IjpmYWxzZSwicHVibGljX2tleSI6ZmFsc2UsImZlYXR1cmVzIjpbXSwiaW50ZXJjb21Vc2VyTmFtZSI6ImJyZnplaV9kazJzZHJxOWthNDY0IiwiaW50ZXJjb21Vc2VySGFzaCI6ImJhMzk3MzFkMDUxMDlhYjUyZDJmOTRjMmZlNmVjOWZhODcwMmNmMjMwZDk0ZTJkMGUzMjU3Njg5ZTc2MmU4N2UiLCJwZXJtaXNzaW9ucyI6W10sImF1dGhUaW1lIjoxNTIzNjYxNTI2ODgzLCJpYXQiOjE1MjM2NjE1MjYsImV4cCI6MTUyNDI2NjMyNn0.bBiJeJ8qEKQ0MB5QHYjOMLOh-y3W0j8cZjBz8SvXuxA
+    http_version: 
+  recorded_at: Fri, 13 Apr 2018 23:18:46 GMT
+recorded_with: VCR 4.0.0

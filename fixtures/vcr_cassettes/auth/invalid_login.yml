@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.resin.io/login_
+    body:
+      encoding: UTF-8
+      string: '{"username":"brfzei+dk2sdrq9ka464@grr.la","password":"brfzei+dk2sdrq9ka4641"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 14 Apr 2018 12:58:05 GMT
+      Etag:
+      - W/"c-dAuDFQrdjS3hezqxDTNgW7AOlYk"
+      Vary:
+      - X-HTTP-Method-Override, Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      Content-Length:
+      - '12'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: Unauthorized
+    http_version: 
+  recorded_at: Sat, 14 Apr 2018 12:57:54 GMT
+recorded_with: VCR 4.0.0
