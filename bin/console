@@ -10,5 +10,7 @@ require "resin"
 # require "pry"
 # Pry.start
 
+@user = Resin::User.new
+
 require "irb"
 IRB.start(__FILE__)

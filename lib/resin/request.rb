@@ -53,7 +53,7 @@ module Resin
     #   headers json=true
     #   # => {}
     #
-    def headers(auth=false, json=true)
+    def headers(auth: false, json: true)
       headers = {}
       headers['Authorization'] = "Bearer #{@settings.get('token')}" if auth
       headers['Content-Type'] = 'application/json' if json

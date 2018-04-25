@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'bundler/setup'
 require 'webmock/rspec'
 require 'fakefs/spec_helpers'
@@ -9,6 +10,9 @@ require 'resin'
 
 CONFIG_FILE_PATH = File.join Dir.home, '.resin', 'resin.cfg'
 
+VALID_USER_EMAIL = 'brfzei+dk2sdrq9ka464@grr.la'
+VALID_USER_PASSWORD = 'brfzei+dk2sdrq9ka464'
+INVALID_USER_PASSWORD = 'brfzei+dk2sdrq9ka464'
 
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"

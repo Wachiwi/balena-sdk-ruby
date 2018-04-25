@@ -45,21 +45,32 @@ module Resin
       @settings.set(key: 'token', value: token)
     end
 
-    def get_user_details
+    def logout
+      @settings.remove('token')
+    end
+
+    def get_details
       return @user_details_cache unless @user_details_cache.empty?
         
       opts = @options.merge({
-        headers: headers,
+        headers: headers(auth: true),
       })
 
       req = self.class.get '/user/v1/whoami', opts
       handle_status_code req
-      token = req.body
-      @settings.set(key: 'token', value: token)
+      @user_details_cache = JSON.parse(req.body)
     end
 
-    def get_token()
+    def get_token
+      @settings.get 'token'
+    end
 
+    def get_id
+      get_details['id']
+    end
+
+    def get_email
+      get_details['email']
     end
 
     def logged_in?
@@ -67,7 +78,16 @@ module Resin
     end
 
     def create_api_key(name)
+      opts = @options.merge({
+        headers: headers(auth: true, json: true),
+        body: JSON.generate({
+          name: name
+        })
+      })
 
+      req = self.class.post '/api-key/user/full', opts
+      handle_status_code req
+      JSON.parse(req.body)
     end
   end
 end
