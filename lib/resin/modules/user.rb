@@ -2,7 +2,7 @@ require 'singleton'
 require 'resin/request'
 require 'json'
 
-module Resin
+module Resin::Modules
   ##
   # This class represents all account based requests like `login`, `register` and `get_details`.
   #
@@ -17,7 +17,7 @@ module Resin
   #   u.logged_in?
   #   # => true
   #
-  class User < Request
+  class User < Resin::Request
 
     def initialize
       super()

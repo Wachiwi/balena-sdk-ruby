@@ -5,12 +5,7 @@ require "resin"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
+@user = Resin::Modules::User.new
 
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
-
-@user = Resin::User.new
-
-require "irb"
-IRB.start(__FILE__)
+require "pry"
+Pry.start

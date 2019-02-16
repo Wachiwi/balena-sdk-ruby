@@ -82,7 +82,7 @@ module Resin
 
       FileUtils.mkdir_p DEFAULT_SETTINGS[:data_directory] unless Dir.exist? DEFAULT_SETTINGS[:data_directory]
       doc = TOML::Generator.new(settings).body
-      File.write @config_file_path, doc
+      File.open(@config_file_path, 'w') do |f| f.write doc end
     end
 
     ##

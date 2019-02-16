@@ -2,8 +2,6 @@ require 'jwt'
 
 module Resin
   class Util
-
-
     def self.get_api_key
       ENV['RESIN_API_KEY']
     end
